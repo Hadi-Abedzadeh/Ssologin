@@ -22,7 +22,7 @@
 		"extra": {
 			"laravel": {
 				"providers": [
-					"Hadiabedzadeh\\Ssologin\\src"
+					"Hadiabedzadeh\\Ssologin"
 				]
 			}
 		}
