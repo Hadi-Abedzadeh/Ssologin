@@ -22,7 +22,7 @@
 		"extra": {
 			"laravel": {
 				"providers": [
-					"Hadiabedzadeh\\Ssologin\\SsoLoginServiceProvider"
+					"Hadiabedzadeh\\Ssologin\\src\\SsoLoginServiceProvider"
 				]
 			}
 		}
