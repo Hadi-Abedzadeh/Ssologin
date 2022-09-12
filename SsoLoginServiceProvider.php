@@ -1,5 +1,5 @@
 <?php
-namespace Hadiabedzadeh\Ssologin\src;
+namespace Hadiabedzadeh\Ssologin;
 
 use Illuminate\Support\ServiceProvider;
 
