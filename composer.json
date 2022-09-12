@@ -1,0 +1,33 @@
+{
+    "name": "hadiabedzadeh/ssologin",
+    "description": "This package is able to login users to different sites from another site",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Hadiabedzadeh\\Ssologin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hadi Abedzadeh"
+        }
+    ],
+	"minimum-stability": "dev",
+		"require": {
+			"php": ">=7.4",
+		},
+		"require-dev": {
+		},
+		"autoload": {
+			"psr-4": {
+				"Hadiabedzadeh\\Ssologin\\": "src/"
+			}
+		},
+		"extra": {
+			"laravel": {
+				"providers": [
+					"Hadiabedzadeh\\Ssologin\\SsoLoginServiceProvider"
+				]
+			}
+		}
+	}
