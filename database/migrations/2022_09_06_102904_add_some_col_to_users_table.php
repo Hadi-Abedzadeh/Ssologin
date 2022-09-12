@@ -14,9 +14,9 @@ class AddSomeColToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-//            $table->string('mobile')->nullable();
-//            $table->string('ldap_user')->nullable();
-//            $table->string('ssn')->nullable();
+           $table->string('mobile')->nullable();
+           $table->string('ldap_user')->nullable();
+           $table->string('ssn')->nullable();
         });
     }
 
