@@ -10,6 +10,8 @@ Require SSO login using [Composer](https://getcomposer.org):
 composer require hadiabedzadeh/ssologin
 ```
 
+Add sso url to `config/app.php` => `'sso_url' => 'https://...' 
+
 ## Vendor publishe
 ```bash
  php artisan vendor:publish --provider="Hadiabedzadeh\Ssologin\SsoLoginServiceProvider"
