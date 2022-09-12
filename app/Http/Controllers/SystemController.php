@@ -37,24 +37,23 @@ class SystemController extends Controller
     {
         $token = $request->token;
 
-        $response = Http::get('//inspect.gandomcs.com/service/v1/system-profile', ['token' => $token])->json();
+        $response = Http::get(config('app.sso_url'), ['token' => $token])->json();
         $email = isset($response['result']['userProfile']['email']) ? $response['result']['userProfile']['email'] : null;
         if(!is_null($email)){
             $email = DB::selectOne("SELECT * FROM users where email = :email", ['email'=> $email]);
         }else{
-            return 'ss';
+			return 'login failed';
         }
 
         if(isset($email->id)) {
             \auth()->loginUsingId($email->id, true);
             return redirect()->route('dashboard.index');
         }
-        return 'login failed';
+		return 'login failed';
     }
 
     public function profile(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'token' => 'required|exists:user_system',
         ]);
@@ -62,7 +61,6 @@ class SystemController extends Controller
         if ($validator->fails()) {
             return $validator->validate();
         }
-
 
         $response = Http::get('inspect.gandomcs.com/service/v1/system-profile', ['token' => $validator->validated()['token']]);
 
@@ -103,7 +101,6 @@ class SystemController extends Controller
         $system_list = DB::select("SELECT * FROM system_list");
         return $system_list;
     }
-
 
     private function addQouteImplode($params)
     {
