@@ -16,7 +16,7 @@
 		},
 		"autoload": {
 			"psr-4": {
-				"Hadiabedzadeh\\Ssologin\\": "src/"
+				"Hadiabedzadeh\\Ssologin\\": "src\\"
 			}
 		},
 		"extra": {
