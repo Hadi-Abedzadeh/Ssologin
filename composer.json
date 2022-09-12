@@ -1,8 +1,10 @@
 {
     "name": "hadiabedzadeh/ssologin",
     "description": "This package is able to login users to different sites from another site",
+	"license": "MIT",
+	"authors": [
+	
     "type": "library",
-    "authors": [
         {
             "name": "Hadi Abedzadeh"
         }
