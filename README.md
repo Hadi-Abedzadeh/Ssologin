@@ -1,4 +1,3 @@
-
 ---
 ## Installation & Usage
 
@@ -10,11 +9,12 @@ Require SSO login using [Composer](https://getcomposer.org):
 composer require hadiabedzadeh/ssologin
 ```
 
-Add sso url to `config/app.php` => `'sso_url' => 'https://...' 
+Add sso url to `config/app.php` => 'sso_url' => 'https://www.gandomcs.com/sso' 
 
 ## Vendor publishe
 ```bash
- php artisan vendor:publish --provider="Hadiabedzadeh\Ssologin\SsoLoginServiceProvider"
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+php artisan vendor:publish --provider="Hadiabedzadeh\Ssologin\SsoLoginServiceProvider"
 ```
 
 You need to publish vendor in your project

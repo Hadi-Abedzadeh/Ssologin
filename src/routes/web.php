@@ -6,7 +6,7 @@ use \Hadiabedzadeh\Ssologin\app\Http\Controllers\SystemAPIController;
 use \Hadiabedzadeh\Ssologin\app\Http\Controllers\Dashboard\SystemController;
 
 Route::group(['prefix' => config('sso.admin_prefix')], function () {
-    Route::resource('ssoSystem', SystemController::class);
+    Route::resource('sso-system', SystemController::class);
 });
 
 Route::group(['prefix'=> config('sso.api_prefix')], function () {
