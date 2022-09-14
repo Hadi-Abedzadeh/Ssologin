@@ -30,24 +30,25 @@ class SystemAPIController extends Controller
         ];
     }
 
-    public function sso(Request $request)
+    public function ssoAuth(Request $request)
     {
         $token = request()->token;
 
-        $response = Http::get(config('app.sso_url'), ['token' => $token])->json();
-        $email = isset($response['result']['userProfile']['email']) ? $response['result']['userProfile']['email'] : null;
-        if(!is_null($email)){
-            $email = DB::selectOne("SELECT * FROM users where email = :email", ['email'=> $email]);
-        }else{
-            return 'login failed';
+        $user_system = DB::selectOne("SELECT TOP 1 * FROM user_system us INNER JOIN users u ON u.id = us.user_id WHERE us.token = :token order by 1 DESC", ['token' => $token]);
+
+        $email = isset($user_system->email) ? $user_system->email : null;
+        if (!is_null($email)) {
+            $email = DB::selectOne("SELECT * FROM users where email = :email", ['email' => $email]);
+        } else {
+            return response()->json(['login failed']);
         }
 
         if(isset($email->id)) {
-            \auth()->loginUsingId($email->id, true);
+           \auth()->loginUsingId($email->id, true);
             return redirect()->route('dashboard.index');
         }
-        return 'login failed';
 
+        return response()->json(['login failed']);
     }
 
     public function list()

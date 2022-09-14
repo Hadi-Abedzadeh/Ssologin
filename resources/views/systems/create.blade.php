@@ -34,7 +34,7 @@
 {{--                </div>--}}
 {{--            @endif--}}
 
-            <form action="{{route('ssoSystem.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('sso-system.store')}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -71,7 +71,6 @@
                             {!! Form::text('link', null, array('placeholder' => 'link', 'class' => 'form-control')) !!}
                         </div>
                     </div>
-
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">

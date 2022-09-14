@@ -23,7 +23,7 @@
                         <h2>{{ __('systems::systems.Systems Management') }}</h2>
                     </div>
                     <div class="pull-left">
-                        <a class="btn btn-success" href="{{ route('ssoSystem.create') }}">{{__('systems::systems.create')}}</a>
+                        <a class="btn btn-success" href="{{ route('sso-system.create') }}">{{__('systems::systems.create')}}</a>
                     </div>
                 </div>
             </div>

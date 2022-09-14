@@ -10,7 +10,7 @@ Route::group(['prefix' => config('sso.admin_prefix')], function () {
 });
 
 Route::group(['prefix'=> config('sso.api_prefix')], function () {
-    Route::get('login/sso', [SystemAPIController::class, 'sso']);
+    Route::get('sso-auth', [SystemAPIController::class, 'ssoAuth']);
     Route::get('system-list', [SystemAPIController::class, 'list']);
     Route::group(['middleware' => 'jwt.verify'], function ($router) {
         Route::get('system-token',  [SystemAPIController::class, 'token']);

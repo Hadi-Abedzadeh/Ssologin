@@ -44,42 +44,42 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>{{__('systems.name')}}:</strong>
-                            {!! Form::text('name', $system_list->name, array('placeholder' => 'Name', 'class' => 'form-control')) !!}
+                        {!! Form::text('name', $system_list->name, array('placeholder' => 'Name', 'class' => 'form-control')) !!}
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>{{__('systems.title')}}:</strong>
-                                {!! Form::text('title', $system_list->title, array('placeholder' => 'title', 'class' => 'form-control')) !!}
-                        </div>
+                    <div class="form-group">
+                        <strong>{{__('systems.title')}}:</strong>
+                            {!! Form::text('title', $system_list->title, array('placeholder' => 'title', 'class' => 'form-control')) !!}
+                    </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>{{__('systems.description')}}:</strong>
-                            {!! Form::text('description', $system_list->description, array('placeholder' => 'description', 'class' => 'form-control')) !!}
+                        {!! Form::text('description', $system_list->description, array('placeholder' => 'description', 'class' => 'form-control')) !!}
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>{{__('systems.icon')}}:</strong>
-                            {!! Form::text('icon', $system_list->icon, array('placeholder' => 'icon', 'class' => 'form-control')) !!}
+                        {!! Form::text('icon', $system_list->icon, array('placeholder' => 'icon', 'class' => 'form-control')) !!}
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>{{__('systems.link')}}:</strong>
-                            {!! Form::text('link', $system_list->link, array('placeholder' => 'link', 'class' => 'form-control')) !!}
+                        {!! Form::text('link', $system_list->link, array('placeholder' => 'link', 'class' => 'form-control')) !!}
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>{{__('systems.key')}}:</strong>
-                            {!! Form::text('key', $system_list->key, array('placeholder' => 'key', 'class' => 'form-control', 'disabled')) !!}
+                        {!! Form::text('key', $system_list->key, array('placeholder' => 'key', 'class' => 'form-control', 'disabled')) !!}
                     </div>
                 </div>
 
@@ -88,7 +88,6 @@
                 </div>
             </div>
             {!! Form::close() !!}
-
         </div>
     </div>
 @endsection
