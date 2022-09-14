@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
-class SystemController extends Controller
+class SystemAPIController extends Controller
 {
     public function token()
     {
@@ -16,7 +16,6 @@ class SystemController extends Controller
         $user_id   = auth()->guard('api')->id();
 
         $created_token = hash('sha256', $system_id.$user_id. microtime(true));
-
 
         $userSystem = new UserSystem;
         $userSystem->user_id   = $user_id;
