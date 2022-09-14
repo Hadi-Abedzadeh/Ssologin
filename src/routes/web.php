@@ -6,13 +6,13 @@ use \Hadiabedzadeh\Ssologin\app\Http\Controllers\SystemAPIController;
 use \Hadiabedzadeh\Ssologin\app\Http\Controllers\Dashboard\SystemController;
 
 Route::group(['prefix' => config('sso.admin_prefix')], function () {
-    Route::resource('dashboard/ssoSystem', SystemController::class);
+    Route::resource('ssoSystem', SystemController::class);
 });
 
 Route::group(['prefix'=> config('sso.api_prefix')], function () {
-    Route::get('/login/sso', [SystemAPIController::class, 'sso']);
-    Route::get('/system-list', [SystemAPIController::class, 'list']);
+    Route::get('login/sso', [SystemAPIController::class, 'sso']);
+    Route::get('system-list', [SystemAPIController::class, 'list']);
     Route::group(['middleware' => 'jwt.verify'], function ($router) {
-        Route::get('/system-token',  [SystemAPIController::class, 'token']);
+        Route::get('system-token',  [SystemAPIController::class, 'token']);
     });
 });
